@@ -45,18 +45,21 @@
         <script type="text/javascript">
             $(document).ready(function(){  
               app.initialize(function(){
+              });            
+              IniciaApp();
+              app.onDeviceReady();      
+            });
 
-               });            
-               contentPage(server+'/Despacho/Despacho',function(RETORNO){
-                    RETORNO = RETORNO.replace("//||||","var HtmlDespacho = callback;  HtmlDespacho = HtmlDespacho.replace(\"//funcionApp\",\"function CerrarRutaApp(){alert('cerrar');}  function ActivaScan(){ScanBarcode();}\"); HtmlDespacho = HtmlDespacho.replace(\"<button type='button' class='btn btn-default' id='btnRegresarLogin' onclick='CerrarRuta()'>x</button>\",\"<button type='button' class='btn btn-default' id='btnRegresarLogin' onclick='CerrarRutaApp()'>x</button>\"); HtmlDespacho = HtmlDespacho.replace(\"<button type='button' id='btnScan' style='height: 19px;' class='btn btn-primary btn-xs btn-block resizeBtn'>Scan</button>\",\"<button type='button' id='btnScan' style='height: 19px;' class='btn btn-primary btn-xs btn-block resizeBtn' onclick='ActivaScan()'>Scan</button>\"); setTimeout(function(){$('#contenedor').html('');$('#contenedor').html(HtmlDespacho); console.log(HtmlDespacho); console.log($('#contenedor').html());},100); ");
+            function IniciaApp(){
+                contentPage(server+'/Despacho/Despacho',function(RETORNO){
+                    RETORNO = RETORNO.replace("//||||","var HtmlDespacho = callback;  HtmlDespacho = HtmlDespacho.replace(\"//funcionApp\",\"function CerrarRutaApp(){IniciaApp();}  function ActivaScan(){ScanBarcode();}\"); HtmlDespacho = HtmlDespacho.replace(\"<button type='button' class='btn btn-default' id='btnRegresarLogin' onclick='CerrarRuta()'>x</button>\",\"<button type='button' class='btn btn-default' id='btnRegresarLogin' onclick='CerrarRutaApp()'>x</button>\"); HtmlDespacho = HtmlDespacho.replace(\"<button type='button' id='btnScan' style='height: 19px;' class='btn btn-primary btn-xs btn-block resizeBtn'>Scan</button>\",\"<button type='button' id='btnScan' style='height: 19px;' class='btn btn-primary btn-xs btn-block resizeBtn' onclick='ActivaScan()'>Scan</button>\"); setTimeout(function(){$('#contenedor').html('');$('#contenedor').html(HtmlDespacho); console.log(HtmlDespacho); console.log($('#contenedor').html());},100); ");
 
                     $("#content_master").html(RETORNO);
                     setTimeout("$('#content_master').show(200);", 100); 
                     setTimeout("$('#loader_sys').hide();", 100);
                });
-               app.onDeviceReady();      
-            });
-
+            }
+            
             function ScanBarcode()
             {
                 console.log('scanning');
