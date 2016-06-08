@@ -1,6 +1,6 @@
 
 //var server = "http://192.168.2.41:81/SAC";
-var server = "http://sac.soyoda.com/SAC_Intranet_CL";
+var server = "http://sac.intranet.cl:82/SAC_Intranet";
 var controller = "";
 var fieldHide = "";
 
