@@ -16,7 +16,7 @@
     <!--<gap:plugin name="com.phonegap.plugins.barcodescanner"/>
     <gap:plugin name="phonegap.plugins.barcodescanner" source="npm" spec="2.2.0" />-->
 
-    <plugin spec="https://github.com/phonegap-build/BarcodeScanner#v2.2.0"/>
+    <plugin spec="https://github.com/phonegap-build/BarcodeScanner#2.2.0"/>
     <!--<feature name="http://api.phonegap.com/1.0/device" />
     <feature name="debug-server" required="true">
        <param name="domain" value="http://debug.phonegap.com"/>
