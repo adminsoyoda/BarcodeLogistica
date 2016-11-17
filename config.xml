@@ -21,15 +21,8 @@
     <feature name="debug-server" required="true">
        <param name="domain" value="http://debug.phonegap.com"/>
        <param name="key" value="willoughby"/>
-    </feature>-->
+    </feature>-->   
     
-    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
-
-    <feature name="http://api.phonegap.com/1.0/device" />
-    <feature name="debug-server" required="true">
-       <param name="domain" value="http://debug.phonegap.com"/>
-       <param name="key" value="willoughby"/>
-    </feature>
 
     <preference name="phonegap-version" value="3.6.3" />
     <preference name="orientation"      value="default" />
@@ -73,7 +66,7 @@
     -->
 
     <!-- content src="http://www.w3.org/2010/05/video/mediaevents.html" / -->
-</widget>
+
 
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
@@ -394,3 +387,5 @@
 
     </platform>
 </plugin>
+
+        </widget>
