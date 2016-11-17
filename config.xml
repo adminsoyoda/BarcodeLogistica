@@ -13,8 +13,8 @@
       Desarrollo Soyoda
     </author>
 
-    <!--<gap:plugin name="com.phonegap.plugins.barcodescanner"/>-->
-    <gap:plugin name="phonegap.plugins.barcodescanner" source="npm" spec="2.2.0" />
+    <!--<gap:plugin name="com.phonegap.plugins.barcodescanner"/>
+    <gap:plugin name="phonegap.plugins.barcodescanner" source="npm" spec="2.2.0" />-->
 
 
     <!--<feature name="http://api.phonegap.com/1.0/device" />
@@ -22,6 +22,14 @@
        <param name="domain" value="http://debug.phonegap.com"/>
        <param name="key" value="willoughby"/>
     </feature>-->
+    
+    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="debug-server" required="true">
+       <param name="domain" value="http://debug.phonegap.com"/>
+       <param name="key" value="willoughby"/>
+    </feature>
 
     <preference name="phonegap-version" value="3.6.3" />
     <preference name="orientation"      value="default" />
