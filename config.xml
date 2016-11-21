@@ -17,7 +17,7 @@
     <gap:plugin name="phonegap.plugins.barcodescanner" source="npm" spec="2.2.0" />-->
 
     <plugin spec="https://github.com/phonegap-build/BarcodeScanner#1.2.0" source="git"/>
-    <gap:plugin name="cordova-plugin-cache-npm" source="npm" spec="1.0.5" />
+    <gap:plugin name="cordova-plugin-cache" source="npm" spec="1.0.5" />
     
     <!--<feature name="http://api.phonegap.com/1.0/device" />
     <feature name="debug-server" required="true">
